@@ -1,0 +1,9 @@
+if __name__ == '__main__':
+    n = int(input())
+    scores = list(map(int, input().split()))
+    unique_scores = list(set(scores))        # Remove duplicates
+    unique_scores.sort(reverse=True)         # Sort descending
+    if len(unique_scores) >= 2:
+        print(unique_scores[1])              # Second highest
+    else:
+        print("No runner-up")                # Edge case handling
